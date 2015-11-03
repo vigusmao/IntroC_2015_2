@@ -1,6 +1,7 @@
 #include<stdlib.h>
 #include<stdio.h>
 #include<math.h>
+#include<sys/time.h>
 
 int eh_primo_1(int x) {
     /* Testa divisibilidade por todos os inteiros
@@ -76,17 +77,26 @@ int main() {
     int limite;
     scanf("%d", &limite);
 
+    struct timeval inicio;
+    gettimeofday(&inicio, NULL);
+
     int contador_de_primos = 0;
     int numero = 2;
     while (numero <= limite) {
-        if (eh_primo_1(numero) == 1) {
+        if (eh_primo_4(numero) == 1) {
             contador_de_primos++;
         }
         numero++;
     }
 
+    struct timeval fim;
+    gettimeofday(&fim, NULL);
+
     printf("\nExistem %d primos menores ou iguais a %d\n",
            contador_de_primos, limite);
+
+    int duracao = fim.tv_sec - inicio.tv_sec;
+    printf("Duracao: %d segundos", duracao);
 
     return 0;
 }
