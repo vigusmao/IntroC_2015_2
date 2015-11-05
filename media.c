@@ -1,33 +1,21 @@
 #include<stdlib.h>
+#include<stdio.h>
+
 
 int main() {
+    int aluno = 1;
+
     while(1) {
         float p1, p2, m;
 
-        printf("\nDigite a nota da P1: ");
-        scanf("%f", &p1);
+        scanf("%f %f", &p1, &p2);
         if (p1 < 0) {
-            break;
-        }
-        printf("Digite a nota da P2: ");
-        scanf("%f", &p2);
-        if (p2 < 0) {
             break;
         }
 
         m = (p1+p2)/2;
-
-        if (m >= 6) {
-            printf("Parabens, aprovado com media %.1f", m);
-        }
-        if (m < 3) {
-            printf("Lamento, reprovado com media %.1f", m);
-        }
-        if (m >= 3 && m < 6) {
-            printf("Sua media foi %.1f e voce precisa de %.1f na PF",
-                   m, 10-m);
-        }
-
+        printf("aluno %d, notas: %.1f e %.1f, media: %.1f\n",
+               aluno++, p1, p2, m);
     }
 
     printf("\n\n");
