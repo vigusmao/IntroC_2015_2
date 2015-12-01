@@ -79,11 +79,15 @@ void imprime_horario(HORARIO h) {
 
 int main() {
     int i;
+    int n_horarios;
+    printf("Quantos horarios? ");
+    scanf("%d", &n_horarios);
 
-    // array estatico de horarios
-    HORARIO meus_horarios[10];
+    // array dinamico de horarios
+    HORARIO* meus_horarios;
+    meus_horarios = (HORARIO*) malloc(n_horarios * sizeof(HORARIO));
 
-    for (i = 0; i < 10; i++) {
+    for (i = 0; i < n_horarios; i++) {
         inicializar_horario(&meus_horarios[i]);
         printf("Digite o horario (hh:mm:ss) --> ");
         scanf("%d:%d:%d",
@@ -96,13 +100,15 @@ int main() {
         converte_horario_12h(&meus_horarios[i]);
     }
 
-    for (i = 0; i < 10; i++) {
+    for (i = 0; i < n_horarios; i++) {
         if (meus_horarios[i].hora < 0) {
             break;
         }
         imprime_horario(meus_horarios[i]);
         printf("\n");
     }
+
+    free(meus_horarios);
 
     printf("\n\n");
     return 0;
