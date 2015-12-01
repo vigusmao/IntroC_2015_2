@@ -30,6 +30,16 @@ HORARIO calcula_tempo_decorrido(HORARIO* inicio_ptr, HORARIO* fim_ptr) {
     return resultado;
 }
 
+void inicializar_horario(HORARIO* h_ptr) {
+
+    h_ptr->hora = 0;   // ou   (*h_ptr).hora = 0;
+    h_ptr->minuto = 0;
+    h_ptr->segundo = 0;
+    h_ptr->formato12h = 0;
+    h_ptr->manha = 0;
+}
+
+
 void converte_horario_12h(HORARIO* h_ptr) {
 //    if ((*h_ptr).hora > 12) {
 //        (*h_ptr).hora = (*h_ptr).hora - 12;
@@ -68,32 +78,31 @@ void imprime_horario(HORARIO h) {
 }
 
 int main() {
-    HORARIO horario_inicial;
-    horario_inicial.hora = 14;
-    horario_inicial.minuto = 3;
-    horario_inicial.segundo = 5;
-    horario_inicial.formato12h = 0;
+    int i;
 
-    HORARIO horario_final;
-    horario_final.hora = 16;
-    horario_final.minuto = 0;
-    horario_final.segundo = 10;
-    horario_final.formato12h = 0;
+    // array estatico de horarios
+    HORARIO meus_horarios[10];
 
-    printf("\nhorario inicial = ");
-    imprime_horario(horario_inicial);
-    printf("\nhorario final = ");
-    imprime_horario(horario_final);
+    for (i = 0; i < 10; i++) {
+        inicializar_horario(&meus_horarios[i]);
+        printf("Digite o horario (hh:mm:ss) --> ");
+        scanf("%d:%d:%d",
+              &(meus_horarios[i].hora),
+              &(meus_horarios[i].minuto),
+              &(meus_horarios[i].segundo));
+        if (meus_horarios[i].hora < 0) {
+            break;
+        }
+        converte_horario_12h(&meus_horarios[i]);
+    }
 
-    printf("\ntempo decorrido = ");
-    HORARIO intervalo = calcula_tempo_decorrido(
-                        &horario_inicial, &horario_final);
-    imprime_horario(intervalo);
-
-    converte_horario_12h(&horario_inicial);
-
-    printf("\nhorario inicial convertido = ");
-    imprime_horario(horario_inicial);
+    for (i = 0; i < 10; i++) {
+        if (meus_horarios[i].hora < 0) {
+            break;
+        }
+        imprime_horario(meus_horarios[i]);
+        printf("\n");
+    }
 
     printf("\n\n");
     return 0;
