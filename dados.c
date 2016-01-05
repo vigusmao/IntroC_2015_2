@@ -9,7 +9,7 @@ int joga_dado() {
 int main() {
     srand(time(NULL));  // inicializando o gerador de numeros aleatorios
 
-    int i, total;
+    int i, total = 0;
     int repeticoes = 10000000;
 
     for (i=0; i<repeticoes; i++) {
