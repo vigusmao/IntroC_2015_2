@@ -7,24 +7,27 @@ int sorteie(int a, int b) {
 }
 
 int simular_aniversarios_naive(int n_pessoas) {
-// retorna 1, se houver aniversarios coincidentes
+// retorna 1, se houver 3 aniversarios coincidentes
 // retorna 0, caso contrario
     int* aniversarios = (int*) malloc(n_pessoas * sizeof(int));
-    int i, j;
+    int i, j, k;
     for (i=0; i<n_pessoas; i++) {
         int aniversario = sorteie(1, 365);
         aniversarios[i] = aniversario;
     }
     for (i=0; i<n_pessoas; i++) {
         for (j=i+1; j<n_pessoas; j++) {
-            if (aniversarios[i] == aniversarios[j]) {
-                free(aniversarios);
-                return 1;  // Encontrei dois aniversarios iguais!
+            for (k=j+1; k<n_pessoas; k++) {
+                if (aniversarios[i] == aniversarios[j] &&
+                    aniversarios[i] == aniversarios[k]) {
+                    free(aniversarios);
+                    return 1;  // Encontrei tres aniversarios iguais!
+                }
             }
         }
     }
     free(aniversarios);
-    return 0;  // Nao encontrei dois iguais!
+    return 0;  // Nao encontrei tres iguais!
 }
 
 int simular_aniversarios(int n_pessoas) {
@@ -38,11 +41,11 @@ int simular_aniversarios(int n_pessoas) {
     for (i=0; i<n_pessoas; i++) {
         int aniversario = sorteie(1, 365);
         dias[aniversario]++;
-        if (dias[aniversario] == 2) {
-            return 1;  // Ja descobri que tem dois caras no mesmo dia!
+        if (dias[aniversario] == 3) {
+            return 1;  // Ja descobri que tem tres caras no mesmo dia!
         }
     }
-    return 0;  // Nao ha dois caras no mesmo dia!
+    return 0;  // Nao ha tres caras no mesmo dia!
 }
 
 int main() {
@@ -52,7 +55,7 @@ int main() {
     int cont_sucessos = 0;
     int i;
     for (i=0; i<repeticoes; i++) {
-        cont_sucessos += simular_aniversarios_naive(57);
+        cont_sucessos += simular_aniversarios(40);
     }
     float prob = 1.0 * cont_sucessos / repeticoes;
     printf("\nProbabilidade = %f", prob);
