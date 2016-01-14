@@ -1,15 +1,26 @@
 #include<stdlib.h>
 #include<stdio.h>
 
-long long unsigned int fib_recursivo(int x) {
-    if (x<=2) {
-        return 1;
+typedef long long unsigned int LLUI;
+
+LLUI fib_recursivo(int x, LLUI* memo) {
+    if (memo[x] != -1) {
+        // Ja conheo a resposta para o parametro x, isto eh, fib(x)
+        return memo[x];
     }
-    return fib_recursivo(x-1) + fib_recursivo(x-2);
+    LLUI resultado;
+    if (x<=2) {
+        resultado = 1;
+    } else {
+        resultado = fib_recursivo(x-1, memo) +
+                    fib_recursivo(x-2, memo);
+    }
+    memo[x] = resultado;
+    return resultado;
 }
 
-long long unsigned int fib_nao_recursivo(int x) {
-    long long unsigned int a=1, b=1, aux;
+LLUI fib_nao_recursivo(int x) {
+    LLUI a=1, b=1, aux;
     int i;
     for (i=2; i<=x; i++) {
         aux = b;
@@ -23,9 +34,18 @@ long long unsigned int fib_nao_recursivo(int x) {
 }
 
 int main() {
+    int MAIOR_VALOR = 1000;
+
+    // criando e inicializando o memo (tecnica da memoizacao)
+    LLUI* memo = (LLUI*) malloc((MAIOR_VALOR+1) * sizeof(LLUI));
+    int i;
+    for (i=0; i<=MAIOR_VALOR; i++) {
+        memo[i] = -1;  // usaremos -1 para indicar desconhecimento
+    }
+
     int x;
-    for (x=1; x<=80; x++) {
-        printf("\nfib(%d) = %llu", x, fib_nao_recursivo(x));
+    for (x=1; x<=MAIOR_VALOR; x++) {
+        printf("\nfib(%d) = %llu", x, fib_recursivo(x, memo));
     }
 
     printf("\n");
