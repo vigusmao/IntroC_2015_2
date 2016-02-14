@@ -1,0 +1,83 @@
+# depslib dependency file v1.0
+1453981598 source:/home/convidado/√Årea de Trabalho/AULACPP/Escola/main.cpp
+	<iostream>
+	"Pessoa.h"
+	"Aluno.h"
+	"Funcionario.h"
+	"Professor.h"
+
+1453981824 /home/convidado/√Årea de Trabalho/AULACPP/Escola/include/Pessoa.h
+	<string>
+
+1453981647 source:/home/convidado/√Årea de Trabalho/AULACPP/Escola/src/Pessoa.cpp
+	"Pessoa.h"
+	<iostream>
+	<string>
+
+1453981656 source:/home/convidado/√Årea de Trabalho/AULACPP/Escola/src/Aluno.cpp
+	"Aluno.h"
+	<iostream>
+
+1453981553 /home/convidado/√Årea de Trabalho/AULACPP/Escola/include/Aluno.h
+	"Pessoa.h"
+	<string>
+
+1453981460 source:/home/convidado/√Årea de Trabalho/AULACPP/Escola/src/Funcionario.cpp
+	"Funcionario.h"
+	<iostream>
+	<string>
+
+1453981968 /home/convidado/√Årea de Trabalho/AULACPP/Escola/include/Funcionario.h
+	<Pessoa.h>
+	<string>
+
+1453979991 /home/convidado/√Årea de Trabalho/AULACPP/Escola/include/Professor.h
+	<Funcionario.h>
+	<string>
+
+1453980326 source:/home/convidado/√Årea de Trabalho/AULACPP/Escola/src/Professor.cpp
+	"Professor.h"
+	<iostream>
+	<string>
+
+1454430642 source:c:\users\juan\skydrive\documentos\mestrado em inform¡tica - ppgi - ufrj\disciplinas\est·gio em docÍncia\aulacpp\escola\src\aluno.cpp
+	"Aluno.h"
+	<iostream>
+
+1453986074 c:\users\juan\skydrive\documentos\mestrado em inform¡tica - ppgi - ufrj\disciplinas\est·gio em docÍncia\aulacpp\escola\include\aluno.h
+	"Pessoa.h"
+	<string>
+
+1454430978 c:\users\juan\skydrive\documentos\mestrado em inform¡tica - ppgi - ufrj\disciplinas\est·gio em docÍncia\aulacpp\escola\include\pessoa.h
+	<string>
+
+1454430829 source:c:\users\juan\skydrive\documentos\mestrado em inform¡tica - ppgi - ufrj\disciplinas\est·gio em docÍncia\aulacpp\escola\src\funcionario.cpp
+	"Funcionario.h"
+	<iostream>
+	<string>
+
+1454430883 c:\users\juan\skydrive\documentos\mestrado em inform¡tica - ppgi - ufrj\disciplinas\est·gio em docÍncia\aulacpp\escola\include\funcionario.h
+	<Pessoa.h>
+	<string>
+
+1453986075 source:c:\users\juan\skydrive\documentos\mestrado em inform¡tica - ppgi - ufrj\disciplinas\est·gio em docÍncia\aulacpp\escola\src\pessoa.cpp
+	"Pessoa.h"
+	<iostream>
+	<string>
+
+1453986075 source:c:\users\juan\skydrive\documentos\mestrado em inform¡tica - ppgi - ufrj\disciplinas\est·gio em docÍncia\aulacpp\escola\src\professor.cpp
+	"Professor.h"
+	<iostream>
+	<string>
+
+1453986074 c:\users\juan\skydrive\documentos\mestrado em inform¡tica - ppgi - ufrj\disciplinas\est·gio em docÍncia\aulacpp\escola\include\professor.h
+	<Funcionario.h>
+	<string>
+
+1454430704 source:c:\users\juan\skydrive\documentos\mestrado em inform¡tica - ppgi - ufrj\disciplinas\est·gio em docÍncia\aulacpp\escola\main.cpp
+	<iostream>
+	"Pessoa.h"
+	"Aluno.h"
+	"Funcionario.h"
+	"Professor.h"
+

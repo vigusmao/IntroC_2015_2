@@ -1,0 +1,58 @@
+# depslib dependency file v1.0
+1453976142 source:/home/convidado/√Årea de Trabalho/AULACPP/Veiculos/src/Moto.cpp
+	"Moto.h"
+	<iostream>
+
+1453975808 /home/convidado/√Årea de Trabalho/AULACPP/Veiculos/include/Moto.h
+	<Veiculo.h>
+
+1453976069 /home/convidado/√Årea de Trabalho/AULACPP/Veiculos/include/Veiculo.h
+
+1453976190 source:/home/convidado/√Årea de Trabalho/AULACPP/Veiculos/src/Veiculo.cpp
+	"Veiculo.h"
+	<iostream>
+
+1453975570 source:/home/convidado/√Årea de Trabalho/AULACPP/Veiculos/src/Caminhao.cpp
+	"Caminhao.h"
+
+1453809013 /home/convidado/√Årea de Trabalho/AULACPP/Veiculos/include/Caminhao.h
+	<Veiculo.h>
+
+1453975848 source:/home/convidado/√Årea de Trabalho/AULACPP/Veiculos/main.cpp
+	<iostream>
+	"Moto.h"
+	"Veiculo.h"
+	"Caminhao.h"
+
+1453975955 source:/home/convidado/√Årea de Trabalho/AULACPP/Veiculos/src/CarroPasseio.cpp
+	"CarroPasseio.h"
+
+1453975052 /home/convidado/√Årea de Trabalho/AULACPP/Veiculos/include/CarroPasseio.h
+	<Veiculo.h>
+
+1454430347 source:c:\users\juan\skydrive\documentos\mestrado em inform¡tica - ppgi - ufrj\disciplinas\est·gio em docÍncia\aulacpp\veiculos\main.cpp
+	<iostream>
+	"Moto.h"
+	"Veiculo.h"
+	"Caminhao.h"
+
+1454430488 c:\users\juan\skydrive\documentos\mestrado em inform¡tica - ppgi - ufrj\disciplinas\est·gio em docÍncia\aulacpp\veiculos\include\moto.h
+	<Veiculo.h>
+
+1454430204 c:\users\juan\skydrive\documentos\mestrado em inform¡tica - ppgi - ufrj\disciplinas\est·gio em docÍncia\aulacpp\veiculos\include\veiculo.h
+
+1454429963 c:\users\juan\skydrive\documentos\mestrado em inform¡tica - ppgi - ufrj\disciplinas\est·gio em docÍncia\aulacpp\veiculos\include\caminhao.h
+	<Veiculo.h>
+
+1454430469 source:c:\users\juan\skydrive\documentos\mestrado em inform¡tica - ppgi - ufrj\disciplinas\est·gio em docÍncia\aulacpp\veiculos\src\moto.cpp
+	"Moto.h"
+	<iostream>
+
+1454430453 source:c:\users\juan\skydrive\documentos\mestrado em inform¡tica - ppgi - ufrj\disciplinas\est·gio em docÍncia\aulacpp\veiculos\src\veiculo.cpp
+	"Veiculo.h"
+	<iostream>
+
+1454430440 source:c:\users\juan\skydrive\documentos\mestrado em inform¡tica - ppgi - ufrj\disciplinas\est·gio em docÍncia\aulacpp\veiculos\src\caminhao.cpp
+	"Caminhao.h"
+	<iostream>
+
