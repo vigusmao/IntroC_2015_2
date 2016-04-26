@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1453376107 source:/home/convidado/√Årea de Trabalho/AULACPP/ContaBancaria/main.cpp
+	<iostream>
+	"Conta.h"
+	<string>
+
+1453807028 /home/convidado/√Årea de Trabalho/AULACPP/ContaBancaria/include/Conta.h
+	<string>
+	<iostream>
+
+1453807074 source:/home/convidado/√Årea de Trabalho/AULACPP/ContaBancaria/src/Conta.cpp
+	"Conta.h"
+
+1454429638 source:c:\users\juan\skydrive\documentos\mestrado em inform¡tica - ppgi - ufrj\disciplinas\est·gio em docÍncia\aulacpp\contabancaria\main.cpp
+	<iostream>
+	"Conta.h"
+	<string>
+
+1454429566 c:\users\juan\skydrive\documentos\mestrado em inform¡tica - ppgi - ufrj\disciplinas\est·gio em docÍncia\aulacpp\contabancaria\include\conta.h
+	<string>
+	<iostream>
+
+1454429532 source:c:\users\juan\skydrive\documentos\mestrado em inform¡tica - ppgi - ufrj\disciplinas\est·gio em docÍncia\aulacpp\contabancaria\src\conta.cpp
+	"Conta.h"
+

@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1453205737 source:/home/convidado/Área de Trabalho/AULACPP/Projeto1/src/Circulo.cpp
+	"Circulo.h"
+
+1453204797 /home/convidado/Área de Trabalho/AULACPP/Projeto1/include/Circulo.h
+	"Ponto.h"
+
+1453204025 /home/convidado/Área de Trabalho/AULACPP/Projeto1/include/Ponto.h
+
+1453204095 source:/home/convidado/Área de Trabalho/AULACPP/Projeto1/src/Ponto.cpp
+	"Ponto.h"
+	<math.h>
+
+1453371324 source:/home/convidado/Área de Trabalho/AULACPP/Projeto1/main.cpp
+	<stdio.h>
+	<iostream>
+	"Ponto.h"
+	"Circulo.h"
+
