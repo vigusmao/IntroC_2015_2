@@ -5,13 +5,16 @@ int main() {
 
     int x=1;
     while (x<=1000) {
-        if (x%3==0 && x%5==0) {
-            printf("fizzbuzz");
-        } else if (x%3==0) {
+        int imprimi_algo = 0;
+        if (x%3==0) {
             printf("fizz");
-        } else if (x%5==0) {
+            imprimi_algo = 1;
+        }
+        if (x%5==0) {
             printf("buzz");
-        } else {
+            imprimi_algo = 1;
+        }
+        if (imprimi_algo==0) {
             printf("%d", x);
         }
         printf("\n");
